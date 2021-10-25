@@ -1,3 +1,7 @@
+.center {
+    text-align: center;
+}
+
 .text-link {
     position: absolute;
     color: #fff;
@@ -24,4 +28,22 @@
 .text-link span {
     padding-left: 10px;
     color: #ffac4b;
+}
+
+.login-header {
+    margin-bottom: 30px;
+    color: #ffac4b;
+}
+
+.btn-sign-out {
+    padding: 4px 8px;
+    margin-top: 16px;
+}
+
+.form-group {
+    margin-top: 8px;
+}
+
+.social-login--facebook {
+    margin-right: 8px;
 }

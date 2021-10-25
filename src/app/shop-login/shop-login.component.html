@@ -3,3 +3,24 @@
         <a routerLink="/shop">Trang chủ</a><i class="icon-arrow-left ti-angle-right"></i><span>Đăng nhập tài khoản</span>
     </div> 
 </div>
+
+<h2 class="center login-header">ĐĂNG NHẬP</h2>
+
+<div *ngIf="!isLoggedin" class="center">
+  <a href="javascript:void(0)" class="social-login--facebook" (click)="loginWithFacebook()"><img width="129px" height="37px" alt="facebook-login-button" src="//bizweb.dktcdn.net/assets/admin/images/login/fb-btn.svg"></a>
+
+  <a href="javascript:void(0)" class="social-login--google" (click)="loginWithGoogle()"><img width="129px" height="37px" alt="google-login-button" src="//bizweb.dktcdn.net/assets/admin/images/login/gp-btn.svg"></a>
+</div>
+
+<div *ngIf="isLoggedin === true" class="center">
+  <div class="form-group">
+    <label>First Name </label>
+    <input type="text" class="form-control" [value]="socialUser.firstName" id="firstname" readonly>
+  </div>
+  <div class="form-group">
+    <label>Last Name </label>
+    <input type="text" class="form-control" [value]="socialUser.lastName" id="lastname" readonly>
+  </div>
+
+  <button type="button" (click)="signOut()" class="btn-sign-out">Sign Out</button>
+</div>

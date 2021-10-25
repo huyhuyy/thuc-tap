@@ -41,7 +41,7 @@ export class CheckOutComponent implements OnInit {
     for(let i = 0; i<this.cart.length; i++){
       this.service.deleteCart(this.cart[i].id).subscribe(p => {
         this.cart = this.cart.filter(data => data.id !== p.id)
-        window.location.reload();
+        window.location.assign("")
       })
     };    
   }
